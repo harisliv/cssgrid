@@ -1,0 +1,47 @@
+.container {
+    width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    background-color: #ddd;
+    grid-gap: 30px;
+
+    grid-auto-rows: 80px;
+    grid-auto-columns: .5fr;
+    grid-auto-flow: row dense;
+    
+    // Align grid items to grid areas
+    // align-items: center;
+    // justify-items: center;
+
+    //Align grid tracks to grid container
+    grid-template-rows: 150px 100px;
+    grid-template-columns: repeat(2, 200px);
+    height: 1000px;
+
+    justify-content: space-evenly;
+    align-content: center;
+
+    .item {
+        padding: 10px;
+        color: white;
+        font-size: 30px;
+        background-color: brown;
+
+        &--4 {
+            background-color: crimson;
+            grid-row: 2 / span 3;
+            // align-self: start;
+            // justify-self: start;
+        }
+
+        &--6 {
+            background-color: lightcoral;
+            grid-row: 2 / span 2;
+        }
+
+        &--7 {
+            background-color: palevioletred;
+            grid-column: 1 / -1;
+        }
+    }
+}

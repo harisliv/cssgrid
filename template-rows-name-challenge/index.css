@@ -1,0 +1,46 @@
+.container {
+  display: -ms-grid;
+  display: grid;
+  width: 1000px;
+  margin: 30px auto;
+  -ms-grid-rows: [header-start] 1fr [header-end box-start] 2fr [box-end main-start] 5fr [main-end footer-start] 1fr [footer-end];
+      grid-template-rows: [header-start] 1fr [header-end box-start] 2fr [box-end main-start] 5fr [main-end footer-start] 1fr [footer-end];
+  -ms-grid-columns: ([col-start] 3fr [col-end])[3] 2fr [grid-end];
+      grid-template-columns: repeat(3, [col-start] 3fr [col-end]) 2fr [grid-end];
+  grid-gap: 30px;
+}
+
+.container > * {
+  background-color: brown;
+  padding: 20px;
+  color: #fff;
+  font-size: 30px;
+}
+
+.header {
+  grid-column: col-start 1 / grid-end;
+}
+
+.sidebar {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+  grid-row: box-start / main-end;
+}
+
+.main-content {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / span 3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+.footer {
+  grid-column: 1 / -1;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+}
+/*# sourceMappingURL=index.css.map */

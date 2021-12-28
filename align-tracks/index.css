@@ -1,0 +1,48 @@
+.container {
+  width: 1000px;
+  margin: 30px auto;
+  display: -ms-grid;
+  display: grid;
+  background-color: #ddd;
+  grid-gap: 30px;
+  grid-auto-rows: 80px;
+  grid-auto-columns: .5fr;
+  grid-auto-flow: row dense;
+  -ms-grid-rows: 150px 100px;
+      grid-template-rows: 150px 100px;
+  -ms-grid-columns: (200px)[2];
+      grid-template-columns: repeat(2, 200px);
+  height: 1000px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.container .item {
+  padding: 10px;
+  color: white;
+  font-size: 30px;
+  background-color: brown;
+}
+
+.container .item--4 {
+  background-color: crimson;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2 / span 3;
+}
+
+.container .item--6 {
+  background-color: lightcoral;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / span 2;
+}
+
+.container .item--7 {
+  background-color: palevioletred;
+  grid-column: 1 / -1;
+}
+/*# sourceMappingURL=index.css.map */
